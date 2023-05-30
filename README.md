@@ -16,8 +16,12 @@ myCanvas.Mouse.x, myCanvas.Mouse.y // Get the mouse x and y position on the canv
 // Use 'K_' followed by the event's code in all caps to refer to a key
 myCanvas.On.KeyDown(key, func, shouldPreventDefault); // Adds a new key down event to the canvas
 myCanvas.On.KeyUp(key, func, shouldPreventDefault);   // Adds a new key up event to the canvas
-myCanvas.On.MouseDown = function () {}                // Adds a new mouse down event to the canvas
-myCanvas.On.MouseUp = function() {}                   // Adds a new mouse up event to the canvas
+myCanvas.On.MouseDown = function () {                 // Adds a new mouse down event to the canvas
+  // do something
+}
+myCanvas.On.MouseUp = function() {                    // Adds a new mouse up event to the canvas
+  // do something
+}
 
 // Drawing functions
 myCanvas.Fill(color);    // Fills the canvas with a solid color
