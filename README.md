@@ -1,2 +1,2 @@
 # 2dev.js
-2dev.js is a 2D game development library for HTML5 Canvas.
+  2dev.js is a 2D game development library for HTML5 Canvas. I originally started developing this library so I could create my games quickly without having to redo any of the math for collision logic. But I kept adding new functions to the library and decided to publish it. This library is very simple and is intended to make game development on Canvas as easy as possible. It is also not a complete library yet, as this is only version 1. But, I will be updating it very often, so be sure to check the Github page for new features.
