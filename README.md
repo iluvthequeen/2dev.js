@@ -4,7 +4,7 @@
 2dev.js is a 2D game development library for HTML5 Canvas. I originally started developing this library so I could create my games quickly without having to redo any of the math for collision logic. But I kept adding new functions to the library and decided to publish it. This library is very simple and is intended to make game development on Canvas as easy as possible. It is also not a complete library yet, as this is only version 1. But, I will be updating it very often, so be sure to check frequently for new features.
 <br/>
 # Tutorial
-### NOTE: The origin of any object's position is always the center.
+### NOTE: The origin of any object's position and rotation is always the center.
 ### Canvas Variables and Functions
 ```javascript
 const myCanvas = new Canvas(width, height); // Creates a new canvas
@@ -54,4 +54,19 @@ Rect(x, y, width, height, color);        // Creates a new rectangle object
 Circle(x, y, radius, color);             // Creates a new circle object
 Line(x1, y1, x2, y2, color);             // Creates a new line object
 Text(text, font, fontSize, x, y, color); // Creates a new text object
+
+/*
+ * All properties below are the same for all objects except lines
+ * It's about the same but you have to specify point1 or point2 of the line
+ * Here are examples:
+ * line.point1.GlideTo(0, 0, 1000);
+ * line.point2.SetPosition(50, 300);
+ * line.point1.velocityX = 0.5;
+ */
+
+// Moving objects
+myObject.x = newXPosition;        // Sets the x position of an object
+myObject.y = newYPosition;        // Sets the y position of an object
+myObject.SetPosition(x, y);       // Sets the position of an object
+myObject.GlideTo(x, y, timeInMs); // Moves an object to any position over a certain amount of time
 ```
