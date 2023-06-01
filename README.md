@@ -43,18 +43,18 @@ LoadedSounds[index];       // An array storing all loaded sounds
 LoadedSounds[index].audio; // A property storing the HTML audio element
 LoadedSounds[index].src;   // A property storing the audio file's source
 
-// Creating image objects and playing sounds
-Img(src, x, y, width, height); // Creates a new image object
-PlaySound(src);                // Plays a sound
+// Playing sounds
+PlaySound(src); // Plays a sound. Make sure to load the audio
+                // file using 'LoadSound()' before playing it
 ```
 ### Objects
 ```javascript
 // Creating objects
-Img(src, x, y, width, height);           // Creates a new image object
-Rect(x, y, width, height, color);        // Creates a new rectangle object
-Circle(x, y, radius, color);             // Creates a new circle object
-Line([x1, y1], [x2, y2], color);         // Creates a new line object
-Text(text, font, fontSize, x, y, color); // Creates a new text object
+const img = Img(src, x, y, width, height);            // Creates a new image object
+const rect = Rect(x, y, width, height, color);        // Creates a new rectangle object
+const circle = Circle(x, y, radius, color);           // Creates a new circle object
+const line = Line([x1, y1], [x2, y2], color);         // Creates a new line object
+const text = Text(text, font, fontSize, x, y, color); // Creates a new text object
 
 // Image object properties
 img.src = newSrc;             // Sets the source of the image. Make sure to load
