@@ -1,7 +1,7 @@
 # 2dev.js
 2dev.js is a 2D game development library I created for HTML5 Canvas. I originally started developing this library so I could create my games quickly without having to redo any of the math for collision logic. But I kept adding new functions to the library and decided to publish it. This library is very simple and is intended to make game development on an HTML5 Canvas as easy as possible. This is not a complete library yet, as this is only version 1. But I will be updating it very often, so be sure to check back frequently for new features.
 <br/>
-# Tutorial
+# Tutorial (will be finished soon, probably in like a week)
 ### NOTE: The origin of any object's position and rotation is always the center.
 ### Events
 ```javascript
@@ -148,4 +148,49 @@ line.(point1|point2).gravityXEnabled = true|false;    // Enable or disable x gra
 line.(point1|point2).gravityYEnabled = true|false;    // Enable or disable y gravity
 line.(point1|point2).SetPosition(x, y);               // Sets the x and y position of the point
 line.(point1|point2).GlideTo(x, y, timeInMs);         // Moves the point to another point over x milliseconds
+```
+### Polygons
+### Rectangles
+### Circles
+### Text
+### Collision Detection
+```javascript
+IsColliding(object1, object2); // Use the 'IsColliding()' function to detect
+                               // collision between any 2 objects (except text objects)
+```
+### Other Functions
+```javascript
+// Loops
+const loop = Loop(function () { // Runs a function every x milliseconds, or
+  // do something               // every frame if timeInMs is undefined
+}, timeInMs);
+loop.ClearLoop();               // Stops the loop
+
+// The 'Repeat()' Function
+const repeat = Repeat(function () { // Runs a function x number of times
+  // do something
+}, num);
+repeat.Stop();                      // Stops running the function
+
+// The 'After' Function
+After(timeInMs, function () { // Runs a function after x milliseconds
+  // do something
+});
+
+// Random Numbers
+RandomNum(minimum, maximum); // Gets a random number between 2 values
+RandomInt(minimum, maximum); // Gets a random integer between 2 values
+
+// Math Functions
+GetDistance([x, y], [x, y]);                 // Gets the distance between 2 points using the
+                                             // Pythagorean theorem
+GetMidPoint([x, y], [x, y]);                 // Gets the middle position of 2 points
+GetAngle([x, y], [x, y]);                    // Gets the angle of a line. The first parameter 
+                                             // is the middle point of the line. The second is one of the
+                                             // points of the line
+DegreesToRadians(degrees);                   // Converts degrees to radians
+RadiansToDegrees(radians);                   // Converts radians to degrees
+GetRotatedPosition([x, y], [x, y], degrees); // Gets the rotated position of a point
+                                             // around another point. The first parameter is the origin,
+                                             // and the second is the point to be rotated
 ```
