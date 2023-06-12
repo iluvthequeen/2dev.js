@@ -150,6 +150,63 @@ line.(point1|point2).SetPosition(x, y);               // Sets the x and y positi
 line.(point1|point2).GlideTo(x, y, timeInMs);         // Moves the point to another point over x milliseconds
 ```
 ### Polygons
+```javascript
+polygon.x = newX;                 // Sets the polygon's x position
+polygon.y = newY;                 // Sets the polygon's y position
+polygon.SetPosition(x, y);        // Sets the polygon's x and y position
+polygon.GlideTo(x, y, timeInMs);  // Moves the polygon to an x and y position over
+                                  // x milliseconds
+polygon.color = newColor;         // Sets the color of the polygon
+polygon.opacity = newOpacity;     // Sets the opacity of the polygon. This can be any number from
+                                  // 0 to 100
+polygon.stroke = true|false;      // Determines if the polygon should be filled or stroked
+polygon.lineWidth = newLineWidth; // Sets the polygon's line width
+
+polygon.rotation = newRotation;   // Sets the polygon's rotation
+polygon.PointTowards(x, y);       // Rotates the polygon towards a point
+
+polygon.borderWidth = newBorderWidth // Sets the polygon's border width
+polygon.borderColor = newborderColor // Sets the polygon's border color
+polygon.showBorder = true|false;     // Shows or hides the polygon's border
+polygon.SetBorder(width, color);     // Sets the polygon's border width and color,
+                                     // and shows the polygon's border if hidden
+
+polygon.points[index]; // Array that stores all of the points of the polygon
+polygon.sides[index];  // Array that stores all of the sides of the polygon as lines
+
+polygon.points[index].SetX(x);               // Sets the x position of the point
+polygon.points[index].SetY(y);               // Sets the y position of the point
+polygon.points[index].SetPosition(x, y);     // Sets the x and y position of the point
+polygon.points[index].SetOffsetX(x);         // Sets the x position offset of the point
+                                             // from the center of the polygon
+polygon.points[index].SetOffsetY(y);         // Sets the y position offset of the point
+                                             // from the center of the polygon
+polygon.points[index].SetOffset(x, y);       // Sets the x and y position offset of the point
+                                             // from the center of the polygon
+polygon.points[index].GlideTo(x, y, timeInMs // Moves the point to an x and y position over
+                                             // x milliseconds
+
+polygon.velocityX = newVelocityX // Sets the x velocity of the polygon. This number is
+                                 // added to the x position of the polygon every frame
+polygon.velocityY = newVelocityY // Sets the y velocity of the polygon. This number is
+                                 // added to the y position of the polygon every frame
+
+polygon.gravityXStrength = newXStrength; // Sets the x gravity strength of the polygon. This value is
+                                         // added to the polygon's x velocity every frame if x gravity
+                                         // is enabled
+polygon.gravityYStrength = newYStrength; // Sets the y gravity strength of the polygon. This value is
+                                         // added to the polygon's y velocity every frame if y gravity
+                                         // is enabled
+polygon.gravityXEnabled = true|false;    // Enables or disables x gravity
+polygon.graivtyYEnabled = true|false;    // Enables or disables y gravity
+
+polygon.On.MouseDown = function () { // Sets the polygon's mouse down event
+  // do something
+}
+polygon.On.MouseUp = function () {   // Sets the polygon's mouse up event
+  // do something
+}
+```
 ### Rectangles
 ### Circles
 ### Text
